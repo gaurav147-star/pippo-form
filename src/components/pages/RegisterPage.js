@@ -24,7 +24,7 @@ export default function SignUpPage() {
             password
         });
         history.push("/login");
-        console.log(credentials);
+        // console.log(credentials);
 
     };
 

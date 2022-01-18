@@ -5,10 +5,12 @@ import LandingPage from './components/pages/LandingPage'
 import LoginPage from './components/pages/LoginPage'
 import RegisterPage from './components/pages/RegisterPage'
 import HomePage from './components/pages/HomePage'
-
 import './App.css'
 
 export default function App() {
+
+
+
     return (
         <Router>
             <div>
@@ -16,7 +18,7 @@ export default function App() {
                     <Route exact path="/" component={ LandingPage } />
                     <Route path="/login" component={ LoginPage } />
                     <Route path="/register" component={ RegisterPage } />
-                    <Route path="/home" component={ HomePage } />
+                    <Route path="/home" component={ ()=><HomePage helloProperty="blabla"/>} />
                 </Switch>
                 <Footer />
             </div>
