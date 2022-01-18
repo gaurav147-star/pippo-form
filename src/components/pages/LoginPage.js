@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import { Link, useHistory } from "react-router-dom";
 import '../../App.css'
 import axios from './Axios'
-import { useDispatch } from "react-redux";
-import { login } from "./../../redux/userSlice";
 
 
 export default function SignInPage() {
 
     let history = useHistory();
-    const dispatch = useDispatch();
+  
 
     const [credentials, setCredentials] = useState({
         email: "",
@@ -31,13 +29,7 @@ export default function SignInPage() {
         history.push("/home");
         // console.log(credentials);
 
-        dispatch(login({
-            email: email,
-            password: password,
-            loggedIn: true,
-            message: "logged in "
-
-        }))
+       
     };
 
     return (
